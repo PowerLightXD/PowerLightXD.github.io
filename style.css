@@ -1,0 +1,271 @@
+:root {
+    --hintergrund: #f7f7f5;
+    --text: #1d1d1f;
+    --text-grau: #5f6368;
+    --akzent: #2b5cff;
+    --karte: #ffffff;
+    --rand: #e3e3e0;
+  }
+   
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   
+  html {
+    font-size: 18px; /* Grundschriftgröße: alle rem-Werte richten sich danach */
+    scroll-behavior: smooth; /* weiches Scrollen bei Klick auf die Navigation */
+  }
+   
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--hintergrund);
+    color: var(--text);
+    line-height: 1.7;
+    text-align: center; /* aller Text steht in der Mitte */
+  }
+   
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+   
+  /* ===== Navigation ===== */
+  .navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(247, 247, 245, 0.9);
+    border-bottom: 1px solid var(--rand);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+  }
+   
+  .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+   
+  .navbar nav {
+    display: flex;
+    gap: 28px;
+  }
+   
+  .navbar nav a {
+    color: var(--text-grau);
+    font-size: 1rem;
+  }
+   
+  .navbar nav a:hover {
+    color: var(--akzent);
+  }
+   
+  /* ===== Startbereich ===== */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* alles waagrecht in die Mitte */
+    padding: 150px 8% 110px;
+    max-width: 900px;
+    margin: 0 auto; /* der ganze Block steht in der Mitte der Seite */
+  }
+   
+  .hero-klein {
+    color: var(--akzent);
+    font-weight: 600;
+    font-size: 1.15rem;
+  }
+   
+  .hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin: 8px 0 24px;
+  }
+   
+  .hero-text {
+    font-size: 1.4rem;
+    color: var(--text-grau);
+    max-width: 680px;
+  }
+   
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 36px;
+  }
+   
+  .ort {
+    margin-top: 28px;
+    color: var(--text-grau);
+  }
+   
+  /* ===== Buttons ===== */
+  .button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    background: var(--akzent);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s;
+  }
+   
+  .button:hover {
+    transform: translateY(-2px);
+  }
+   
+  .button-hell {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--rand);
+  }
+   
+  /* ===== Abschnitte ===== */
+  .abschnitt {
+    padding: 90px 8%;
+    max-width: 1100px;
+    margin: 0 auto; /* jeder Abschnitt steht in der Mitte */
+  }
+   
+  .abschnitt h2 {
+    font-size: 2.4rem;
+    margin-bottom: 36px;
+  }
+   
+  .ueber-text {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 1.2rem;
+    color: var(--text-grau);
+  }
+   
+  /* ===== Projekt-Karten ===== */
+  .karten {
+    display: flex;
+    flex-wrap: wrap; /* Karten rutschen in die nächste Zeile, wenn kein Platz ist */
+    justify-content: center;
+    gap: 24px;
+  }
+   
+  .karte {
+    flex: 1 1 400px; /* jede Karte mindestens 400px breit, am Computer 2 pro Zeile */
+    background: var(--karte);
+    border: 1px solid var(--rand);
+    border-radius: 12px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+   
+  .karte h3 {
+    font-size: 1.4rem;
+  }
+   
+  .karte p {
+    color: var(--text-grau);
+    font-size: 1.05rem;
+  }
+   
+  .tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--akzent);
+    background: #e8eeff;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+   
+  .technik {
+    margin-top: auto; /* schiebt die Technik-Zeile nach unten */
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+   
+  /* ===== Kenntnisse ===== */
+  .skills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+   
+  .skills li {
+    background: var(--karte);
+    border: 1px solid var(--rand);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+   
+  /* ===== Kontakt ===== */
+  .kontakt p {
+    color: var(--text-grau);
+    font-size: 1.2rem;
+    margin-bottom: 28px;
+  }
+   
+  /* ===== Footer ===== */
+  footer {
+    padding: 36px;
+    color: var(--text-grau);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--rand);
+  }
+   
+  /* ===== Handy-Ansicht ===== */
+  @media (max-width: 700px) {
+    html {
+      font-size: 17px;
+    }
+   
+    .navbar {
+      flex-direction: column;
+      gap: 8px;
+    }
+   
+    .navbar nav {
+      gap: 14px;
+    }
+   
+    .navbar nav a {
+      font-size: 0.9rem;
+      white-space: nowrap; /* "Über mich" bleibt in einer Zeile */
+    }
+   
+    .hero {
+      padding: 80px 6% 60px;
+    }
+   
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+   
+    .hero-text {
+      font-size: 1.2rem;
+    }
+   
+    .hero-buttons {
+      flex-wrap: wrap;
+    }
+   
+    .abschnitt {
+      padding: 60px 6%;
+    }
+   
+    .abschnitt h2 {
+      font-size: 2rem;
+    }
+  }
